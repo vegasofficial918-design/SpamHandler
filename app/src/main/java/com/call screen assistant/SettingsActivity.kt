@@ -16,4 +16,11 @@ class SettingsActivity : AppCompatActivity() {
 
         screeningSwitch.isChecked = true
     }
+    val manager = SettingsManager(this)
+
+screeningSwitch.isChecked = manager.screeningEnabled()
+
+screeningSwitch.setOnCheckedChangeListener { _, checked ->
+    manager.setScreeningEnabled(checked)
+}
 }
