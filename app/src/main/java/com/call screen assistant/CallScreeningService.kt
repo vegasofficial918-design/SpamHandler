@@ -3,6 +3,12 @@ package com.callscreenassistant
 import android.telecom.Call
 import android.telecom.CallScreeningService
 
+NotificationHelper.show(
+    this,
+    "Incoming Call",
+    "An incoming call was screened."
+)
+
 class CallScreenService : CallScreeningService() {
 
     override fun onScreenCall(callDetails: Call.Details) {
